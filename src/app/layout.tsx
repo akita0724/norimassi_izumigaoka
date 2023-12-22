@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 dayjs.extend(timezone);
 dayjs.tz.setDefault("Asia/Tokyo");
 
-// const gtag = "G-Y9T104VC35";
-const gtag = "";
+const gtag = "G-Y9T104VC35";
+// const gtag = "";
 
 export default function RootLayout({
   children,
@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      {/* <Script
+      <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag}`}
       />
@@ -43,7 +43,7 @@ export default function RootLayout({
            gtag('config', '${gtag}');
            `,
         }}
-      /> */}
+      />
       <body className={inter.className}>
         <Header />
         <Providers>{children}</Providers>
