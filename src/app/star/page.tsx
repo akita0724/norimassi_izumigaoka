@@ -13,7 +13,13 @@ import { useAtom } from "jotai";
 
 const SearchFromStar = () => {
   const [star, setStar] = useAtom(StarValue);
-  if (star.length === 0) return <>登録されていません</>;
+  if (star.length === 0)
+    return (
+      <div>
+        <p>登録されていません</p>
+        <LinkButton href="/">トップへ戻る</LinkButton>
+      </div>
+    );
   try {
     return (
       <div className="center-flex">
@@ -41,6 +47,7 @@ const SearchFromStar = () => {
       <div className="center-flex">
         <p>エラーが発生しました</p>
         <p>{msg}</p>
+        <LinkButton href="/">トップへ戻る</LinkButton>
       </div>
     );
   }
