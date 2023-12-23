@@ -5,7 +5,7 @@ import { supabaseClient } from "./supabase";
 import { routeID_ALL } from "@/data/routes";
 
 export const generateTimetable = async (params: SearchParam, dataset: string) => {
-    const searchDate = dayjs.unix(params.unix)
+    const searchDate = dayjs.unix(params.unix).tz("Asia/Tokyo")
     // const day = searchDate.day()
     const day = 0
     const hour = searchDate.hour()

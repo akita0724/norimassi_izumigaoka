@@ -7,11 +7,12 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 export const verifyParam = (params: SearchParam): SearchParam | null => {
-    const now = dayjs().unix()
+    const now = dayjs().tz("Asia/Tokyo").unix()
 
     let res: SearchParam = {
         depature: 0,
         dest: 0,
+        // unix: ((params.unix || now) - (params.ahead || 3) * 60) + 60 * 60 * 9,
         unix: (params.unix || now) - (params.ahead || 3) * 60,
         head: 0,
         ahead: 0,
