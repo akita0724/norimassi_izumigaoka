@@ -27,8 +27,13 @@ body {
   @apply bg-gray-300 text-black;
 }
 
+.form {
+  @apply flex flex-col space-y-5
+}
+
 .inp,
-.select {
+.select,
+.form::selection {
   @apply appearance-none border rounded py-2 px-3 text-gray-700 leading-tight text-center focus:outline-none w-[80vw];
 }
 
@@ -37,7 +42,7 @@ body {
 }
 
 .btn-star {
-  @apply appearance-none border rounded py-2 px-3 text-gray-700 leading-tight text-center focus:outline-none w-[50vw] bg-yellow-200 my-4;
+  @apply appearance-none border rounded py-2 px-3 text-gray-700 leading-tight text-center focus:outline-none w-[50vw] my-4;
 }
 
 .inp:focus {

@@ -47,7 +47,7 @@ export const SetStar = ({ value }: { value: starElement }) => {
     <>
       {!add ? (
         <>
-          <button className="btn-star" onClick={handler}>
+          <button className="btn-star bg-yellow-200" onClick={handler}>
             お気に入りに登録する
           </button>
         </>

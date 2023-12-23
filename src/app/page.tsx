@@ -13,7 +13,7 @@ import { StarButton } from "@/components/useStar";
 export default function Home() {
   return (
     <div className="center-flex">
-      <div className="flex flex-col space-y-5">
+      <div className="form">
         <DepatureSelect />
         <StopSelect />
         <DestinationSelect />

@@ -11,7 +11,7 @@ export const LinkButton = ({
   const { push } = useRouter();
   return (
     <button
-      className="inp bg-gray-300 m-auto"
+      className="inp bg-gray-300"
       type="button"
       onClick={() => push(href)}
     >
@@ -35,6 +35,19 @@ export const SearchButton = ({
       onClick={() => push(href)}
     >
       {children}
+    </button>
+  );
+};
+
+export const BackButton = ({ stop }: { stop: number }) => {
+  const { push } = useRouter();
+  return (
+    <button
+      className="btn-star bg-gray-300"
+      type="button"
+      onClick={() => push(stop === 1 ? "/star" : "/")}
+    >
+      戻る
     </button>
   );
 };

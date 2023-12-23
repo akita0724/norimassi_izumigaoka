@@ -4,6 +4,9 @@ export const dest_options: Array<Array<Array<BusStopLabel>>> = [
     [
         [{ value: '101', label: '泉が丘' },
         { value: '102', label: '有松' },
+        { value: '308', label: '泉野三丁目' },
+        { value: '309', label: '沼田町' },
+        { value: '310', label: '寺町五丁目' },
         { value: '103', label: '泉二丁目' },
         { value: '104', label: '泉一丁目' },
         { value: '105', label: '野町' },

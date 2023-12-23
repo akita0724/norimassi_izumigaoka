@@ -1,18 +1,10 @@
-import { LinkButton } from "@/components/button";
+import { BackButton, LinkButton } from "@/components/button";
 import { Card } from "@/components/card";
 import { SetStar } from "@/components/setStar";
 import { Dataset } from "@/data/dataset";
 import { generateTimetable } from "@/lib/generateTimetable";
 import { verifyParam } from "@/lib/verifyParam";
 import { SearchParam } from "@/types/params";
-
-const BackButton = ({ stop }: { stop: number }) => {
-  if (stop == 1) {
-    return <LinkButton href="/star">戻る</LinkButton>;
-  } else {
-    return <LinkButton href="/">戻る</LinkButton>;
-  }
-};
 
 const Timetable = async ({ searchParams }: { searchParams: SearchParam }) => {
   const dataset = "timetable-2023-12";
