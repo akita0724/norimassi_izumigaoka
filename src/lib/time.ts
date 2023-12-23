@@ -1,6 +1,8 @@
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export const calUnix = (date: string, time: string) => {
 
@@ -29,8 +31,6 @@ export const displayTime = (time: number): string => {
 }
 
 export const useTime = () => {
-    dayjs.extend(utc);
-    dayjs.extend(timezone);
     const date = dayjs().tz("Asia/Tokyo");
     return date
 }
