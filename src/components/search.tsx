@@ -14,7 +14,7 @@ export const DepatureSelect = () => {
     <>
       <p className="text-xl">乗車バス停</p>
       <Select
-        className="select"
+        className="text-center"
         options={depature_options}
         required={true}
         onChange={(e) =>
@@ -38,6 +38,7 @@ export const StopSelect = () => {
     <>
       <p className="text-xl">のりば</p>
       <Select
+        className="text-center"
         options={stopOptions[value.depature]}
         required={true}
         onChange={(e) =>
@@ -60,6 +61,7 @@ export const DestinationSelect = () => {
     <>
       <p className="text-xl">下車バス停</p>
       <Select
+        className="text-center"
         options={dest_options[value.depature][value.stop]}
         required={true}
         onChange={(e) =>

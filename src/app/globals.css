@@ -27,7 +27,8 @@ body {
   @apply bg-gray-300 text-black;
 }
 
-.inp {
+.inp,
+.select {
   @apply appearance-none border rounded py-2 px-3 text-gray-700 leading-tight text-center focus:outline-none w-[80vw];
 }
 
